@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateNovitBackDto } from './dto/create-novit-back.dto';
 import { UpdateNovitBackDto } from './dto/update-novit-back.dto';
+import { CreateArchiveDto } from './dto/create-archive.dto';
 
 @Injectable()
 export class NovitBackService {
@@ -35,7 +36,7 @@ export class NovitBackService {
     };
   }
 
-  createArchive(id: number) {
+  createArchive(id: number, bodyArchive: CreateArchiveDto) {
     if (!id) throw new BadRequestException('No se encuentra el id');
 
     return {
