@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateNovitBackDto } from './dto/create-novit-back.dto';
 import { UpdateNovitBackDto } from './dto/update-novit-back.dto';
@@ -16,10 +17,12 @@ export class NovitBackService {
 
   getArchive(id: number) {
     if (!id) throw new BadRequestException('No se encuentra el id');
+
+    const dataId = this.dataArchives.filter((obj) => obj.legalNormId == id);
     return {
       statusCode: 200,
       messageCode: 'Respuesta disponible',
-      data: this.dataArchives,
+      data: dataId,
       totalRegistros: 6,
     };
   }
@@ -38,7 +41,7 @@ export class NovitBackService {
 
   createArchive(id: number, bodyArchive: CreateArchiveDto) {
     if (!id) throw new BadRequestException('No se encuentra el id');
-
+    console.log(bodyArchive);
     return {
       statusCode: 200,
       messageCode: 'Inserción realizada correctamente',
