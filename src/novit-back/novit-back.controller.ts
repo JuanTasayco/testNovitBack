@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { NovitBackService } from './novit-back.service';
 import { CreateNovitBackDto } from './dto/create-novit-back.dto';
 import { UpdateNovitBackDto } from './dto/update-novit-back.dto';
@@ -12,6 +20,11 @@ export class NovitBackController {
     return this.novitBackService.create(createNovitBackDto);
   }
 
+  @Get('legalNorms')
+  getNormas() {
+    return this.novitBackService.getNormas();
+  }
+
   @Get()
   findAll() {
     return this.novitBackService.findAll();
@@ -23,7 +36,10 @@ export class NovitBackController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateNovitBackDto: UpdateNovitBackDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateNovitBackDto: UpdateNovitBackDto,
+  ) {
     return this.novitBackService.update(+id, updateNovitBackDto);
   }
 
