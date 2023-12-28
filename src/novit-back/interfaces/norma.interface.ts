@@ -28,7 +28,7 @@ export interface ResponseCreate {
 interface dataResponseCreate {
   legalNormId?: number;
   archiveId?: number;
-  archiveBase654?: string;
+  archiveBase64?: string;
 }
 
 export interface ResponseGetNorma {

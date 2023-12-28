@@ -15,18 +15,13 @@ import { UpdateNovitBackDto } from './dto/update-novit-back.dto';
 export class NovitBackController {
   constructor(private readonly novitBackService: NovitBackService) {}
 
-  @Post()
-  create(@Body() createNovitBackDto: CreateNovitBackDto) {
-    return this.novitBackService.create(createNovitBackDto);
-  }
-
   @Get('legalNorms')
   getNormas() {
     return this.novitBackService.getNormas();
   }
 
   @Get('legalNorm/:idNorma/archive')
-  findAll(@Param('idNorma') id: number) {
+  getArchive(@Param('idNorma') id: number) {
     return this.novitBackService.getArchive(id);
   }
 
@@ -36,10 +31,17 @@ export class NovitBackController {
   }
 
   @Post('legalNorm')
-  createNorma() {
-    return this.novitBackService.createNorma();
+  createNorma(@Body() createBody: CreateNovitBackDto) {
+    return this.novitBackService.createNorma(createBody);
   }
 
+  /*  
+  
+    @Post()
+  create(@Body() createNovitBackDto: CreateNovitBackDto) {
+    return this.novitBackService.create(createNovitBackDto);
+  }
+  
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.novitBackService.findOne(+id);
@@ -56,5 +58,5 @@ export class NovitBackController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.novitBackService.remove(+id);
-  }
+  } */
 }
