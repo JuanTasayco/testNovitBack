@@ -1,15 +1,6 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { NovitBackService } from './novit-back.service';
 import { CreateNovitBackDto } from './dto/create-novit-back.dto';
-import { UpdateNovitBackDto } from './dto/update-novit-back.dto';
 
 @Controller('novit-back')
 export class NovitBackController {
@@ -25,7 +16,7 @@ export class NovitBackController {
     return this.novitBackService.getArchive(id);
   }
 
-  @Post('/legalNorm/:id/archive')
+  @Post('/legalNorm/:idNorma/archive')
   createArchive(@Param('idNorma') id: number) {
     return this.novitBackService.createArchive(id);
   }
