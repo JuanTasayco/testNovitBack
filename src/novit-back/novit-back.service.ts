@@ -8,6 +8,22 @@ export class NovitBackService {
     return 'This action adds a new novitBack';
   }
 
+  getNormas() {
+    return {};
+  }
+
+  getArchive(id: number) {
+    return id;
+  }
+
+  createArchive(id: number) {
+    return id;
+  }
+
+  createNorma() {
+    return 'norma creada';
+  }
+
   findAll() {
     return `This action returns all novitBack`;
   }
@@ -23,13 +39,6 @@ export class NovitBackService {
   remove(id: number) {
     return `This action removes a #${id} novitBack`;
   }
-
-  getNormas() {
-    return {
-      
-    };
-  }
-
   dataNormas = [
     {
       legalNormId: 1,

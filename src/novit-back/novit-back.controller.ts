@@ -25,9 +25,19 @@ export class NovitBackController {
     return this.novitBackService.getNormas();
   }
 
-  @Get()
-  findAll() {
-    return this.novitBackService.findAll();
+  @Get('legalNorm/:idNorma/archive')
+  findAll(@Param('idNorma') id: number) {
+    return this.novitBackService.getArchive(id);
+  }
+
+  @Post('/legalNorm/:id/archive')
+  createArchive(@Param('idNorma') id: number) {
+    return this.novitBackService.createArchive(id);
+  }
+
+  @Post('legalNorm')
+  createNorma() {
+    return this.novitBackService.createNorma();
   }
 
   @Get(':id')
