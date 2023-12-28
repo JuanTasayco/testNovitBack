@@ -29,7 +29,7 @@ export class NovitBackService {
       statusCode: 200,
       messageCode: 'Registrado correctamente',
       data: {
-        legalNormaId: 1,
+        legalNormId: 1,
         archiveId: 1,
         archiveBase64: null,
       },
