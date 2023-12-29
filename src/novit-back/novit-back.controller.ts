@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { NovitBackService } from './novit-back.service';
 import { CreateNovitBackDto } from './dto/create-novit-back.dto';

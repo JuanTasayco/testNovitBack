@@ -28,6 +28,7 @@ export class NovitBackService {
   }
 
   createNorma(createBody: CreateNovitBackDto) {
+    console.log(createBody);
     return {
       statusCode: 200,
       messageCode: 'Registrado correctamente',
@@ -53,7 +54,7 @@ export class NovitBackService {
 
   /* ----------------------------------------------------------------- */
   create(createNovitBackDto: CreateNovitBackDto) {
-    return 'This action adds a new novitBack';
+    return createNovitBackDto;
   }
 
   findAll() {
@@ -65,7 +66,7 @@ export class NovitBackService {
   }
 
   update(id: number, updateNovitBackDto: UpdateNovitBackDto) {
-    return `This action updates a #${id} novitBack`;
+    return updateNovitBackDto;
   }
 
   remove(id: number) {
