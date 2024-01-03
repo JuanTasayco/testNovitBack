@@ -1,6 +1,6 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { CreateAlertaDto } from './dto/create-alerta.dto';
-import { UpdateAlertaDto } from './dto/update-alerta.dto';
 import { FILTER_ALERT_DATA } from './data/filter-alert.data';
 import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
 
@@ -28,7 +28,7 @@ export class AlertasService {
 
   /* 7 */
   getAlerts(requestAlertBody: FilterAlertDtoRequest) {
-    console.log(requestAlertBody);
+    const { size, page } = requestAlertBody;
     return FILTER_ALERT_DATA;
   }
 }
