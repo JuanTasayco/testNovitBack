@@ -20,25 +20,6 @@ export const PARAMETER_DATA_TYPE_DOC: IParameterAlert = {
   ],
 };
 
-export const PARAMETER_DATA_ESTADO_FINAL: IParameterAlert = {
-  status: '200',
-  messageCode: 'Successfull',
-  data: [
-    {
-      parameterId: 'STATUS_FINAL1',
-      parameterName: 'STATUS_FINAL1',
-    },
-    {
-      parameterId: 'STATUS_FINAL2',
-      parameterName: 'STATUS_FINAL2',
-    },
-    {
-      parameterId: 'STATUS_FINAL3',
-      parameterName: 'STATUS_FINAL3',
-    },
-  ],
-};
-
 export const PARAMETER_DATA_DET_PROCESO: IParameterAlert = {
   status: '200',
   messageCode: 'Successfull',
@@ -90,8 +71,27 @@ export const PARAMETER_DATA_MARCA_REVISION: IParameterAlert = {
       parameterName: 'MARCA_REV2',
     },
     {
-      parameterId: 'MARCA_REV2',
-      parameterName: 'MARCA_REV2',
+      parameterId: 'MARCA_REV3',
+      parameterName: 'MARCA_REV3',
+    },
+  ],
+};
+
+export const PARAMETER_DATA_ESTADO_FINAL: IParameterAlert = {
+  status: '200',
+  messageCode: 'Successfull',
+  data: [
+    {
+      parameterId: 'STATUS_FINAL1',
+      parameterName: 'STATUS_FINAL1',
+    },
+    {
+      parameterId: 'STATUS_FINAL2',
+      parameterName: 'STATUS_FINAL2',
+    },
+    {
+      parameterId: 'STATUS_FINAL3',
+      parameterName: 'STATUS_FINAL3',
     },
   ],
 };

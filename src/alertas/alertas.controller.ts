@@ -3,6 +3,7 @@ import { Controller, Get, Query } from '@nestjs/common';
 import { AlertasService } from './alertas.service';
 
 import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
+import { ParamGroup } from './interfaces/parameter.interfaces';
 
 @Controller('alertas')
 export class AlertasController {
@@ -40,7 +41,7 @@ export class AlertasController {
   }
 
   @Get('/parameters')
-  getParametersAlert(@Query('parameterGroup') parameterGroup: string) {
+  getParametersAlert(@Query('parameterGroup') parameterGroup: ParamGroup) {
     return this.alertasService.getParametersAlert(parameterGroup);
   }
 }

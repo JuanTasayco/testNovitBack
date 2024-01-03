@@ -7,6 +7,7 @@ import {
   PARAMETER_DATA_TIPO_ALERTA,
   PARAMETER_DATA_TYPE_DOC,
 } from './data/parameter.data';
+import { ParamGroup } from './interfaces/parameter.interfaces';
 
 @Injectable()
 export class AlertasService {
@@ -22,15 +23,8 @@ export class AlertasService {
     return FILTER_ALERT_DATA;
   }
 
-  getParametersAlert(typeGroup: string) {
-    /*TIPO_ALERTA
-      ESTADO_FINAL
-      TIP_DOCUM
-      DET_PROCESO
-    */
-    console.log(typeGroup);
-
-    switch (typeGroup) {
+  getParametersAlert(parameterGroup: ParamGroup) {
+    switch (parameterGroup) {
       case 'TIPO_ALERTA':
         return PARAMETER_DATA_TIPO_ALERTA;
 
