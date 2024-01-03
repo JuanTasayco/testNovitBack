@@ -40,7 +40,7 @@ export class AlertasController {
   }
 
   @Get('/parameters')
-  getParametersAlert(@Query('typeGroup') typeGroup: string) {
-    return this.alertasService.getParametersAlert(typeGroup);
+  getParametersAlert(@Query('parameterGroup') parameterGroup: string) {
+    return this.alertasService.getParametersAlert(parameterGroup);
   }
 }
