@@ -1,27 +1,48 @@
 /* eslint-disable prettier/prettier */
-import { IsNumber, IsString } from 'class-validator';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class FilterAlertDtoRequest {
   @IsString()
-  activationDateFrom: string;
+  @IsOptional()
+  activationDateFrom?: string;
+
   @IsString()
-  activationDateUntil: string;
+  @IsOptional()
+  activationDateUntil?: string;
+
   @IsString()
-  reviewDateFrom: string;
+  @IsOptional()
+  reviewDateFrom?: string;
+
   @IsString()
-  reviewDateUntil: string;
+  @IsOptional()
+  reviewDateUntil?: string;
+
   @IsString()
-  reviewMarkId: string;
+  @IsOptional()
+  reviewMarkId?: string;
+
   @IsString()
-  alertTypeId: string;
+  @IsOptional()
+  alertTypeId?: string;
+
   @IsString()
-  reviewStatusId: string;
+  @IsOptional()
+  reviewStatusId?: string;
+
   @IsString()
-  userId: string;
+  @IsOptional()
+  userId?: string;
+
   @IsString()
-  roleId: string;
+  @IsOptional()
+  roleId?: string;
+
   @IsNumber()
-  size: number;
+  @IsOptional()
+  size?: number;
+
   @IsNumber()
-  page: number;
+  @IsOptional()
+  page?: number;
 }

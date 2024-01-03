@@ -1,8 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Query } from '@nestjs/common';
 import { AlertasService } from './alertas.service';
 import { CreateAlertaDto } from './dto/create-alerta.dto';
-import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
 
 @Controller('alertas')
 export class AlertasController {
@@ -35,7 +34,7 @@ export class AlertasController {
 
   /* 7 */
   @Get('/alertsControl')
-  getAlerts(@Body() requestAlertBody: FilterAlertDtoRequest) {
-    return this.alertasService.getAlerts(requestAlertBody);
+  getAlerts(@Query() queryParams: any) {
+    return this.alertasService.getAlerts(queryParams);
   }
 }

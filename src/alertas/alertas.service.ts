@@ -2,7 +2,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateAlertaDto } from './dto/create-alerta.dto';
 import { FILTER_ALERT_DATA } from './data/filter-alert.data';
-import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
 
 @Injectable()
 export class AlertasService {
@@ -27,8 +26,12 @@ export class AlertasService {
   } */
 
   /* 7 */
-  getAlerts(requestAlertBody: FilterAlertDtoRequest) {
+  getAlerts(requestAlertBody: any) {
     const { size, page } = requestAlertBody;
+    const { data } = FILTER_ALERT_DATA;
+    data.numberItems = size;
+    data.numberPages = page;
+    data.restrictions.splice(data.numberItems);
     return FILTER_ALERT_DATA;
   }
 }
