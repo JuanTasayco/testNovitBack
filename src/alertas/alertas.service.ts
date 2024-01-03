@@ -1,13 +1,12 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { CreateAlertaDto } from './dto/create-alerta.dto';
 import { FILTER_ALERT_DATA } from './data/filter-alert.data';
 
 @Injectable()
 export class AlertasService {
-  create(createAlertaDto: CreateAlertaDto) {
+  /*   create(createAlertaDto: CreateAlertaDto) {
     return 'This action adds a new alerta';
-  }
+  } */
 
   /*  findAll() {
     return `This action returns all alertas`;
@@ -27,10 +26,12 @@ export class AlertasService {
 
   /* 7 */
   getAlerts(requestAlertBody: any) {
+    console.log(requestAlertBody);
     const { size, page } = requestAlertBody;
+
     const { data } = FILTER_ALERT_DATA;
-    data.numberItems = size;
-    data.numberPages = page;
+    data.numberItems = Number(size);
+    data.numberPages = Number(page);
     data.restrictions = data.restrictions.slice(0, data.numberItems);
     return FILTER_ALERT_DATA;
   }

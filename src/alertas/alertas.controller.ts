@@ -1,16 +1,17 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Post, Body, Query } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { AlertasService } from './alertas.service';
-import { CreateAlertaDto } from './dto/create-alerta.dto';
+
+import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
 
 @Controller('alertas')
 export class AlertasController {
   constructor(private readonly alertasService: AlertasService) {}
 
-  @Post()
+  /* @Post()
   create(@Body() createAlertaDto: CreateAlertaDto) {
     return this.alertasService.create(createAlertaDto);
-  }
+  } */
 
   /*   @Get()
   findAll() {
@@ -34,7 +35,7 @@ export class AlertasController {
 
   /* 7 */
   @Get('/alertsControl')
-  getAlerts(@Query() queryParams: any) {
+  getAlerts(@Query() queryParams: FilterAlertDtoRequest) {
     return this.alertasService.getAlerts(queryParams);
   }
 }

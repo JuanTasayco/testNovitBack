@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { IsNumber, IsOptional, IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 
 export class FilterAlertDtoRequest {
   @IsString()
@@ -38,11 +38,9 @@ export class FilterAlertDtoRequest {
   @IsOptional()
   roleId?: string;
 
-  @IsNumber()
   @IsOptional()
   size?: number;
 
-  @IsNumber()
   @IsOptional()
   page?: number;
 }
