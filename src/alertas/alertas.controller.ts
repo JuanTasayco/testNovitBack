@@ -38,4 +38,9 @@ export class AlertasController {
   getAlerts(@Query() queryParams: FilterAlertDtoRequest) {
     return this.alertasService.getAlerts(queryParams);
   }
+
+  @Get('/parameters')
+  getParametersAlert(@Query('typeGroup') typeGroup: string) {
+    return this.alertasService.getParametersAlert(typeGroup);
+  }
 }
