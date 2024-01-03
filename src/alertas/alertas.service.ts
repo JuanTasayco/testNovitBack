@@ -31,7 +31,7 @@ export class AlertasService {
     const { data } = FILTER_ALERT_DATA;
     data.numberItems = size;
     data.numberPages = page;
-    data.restrictions.splice(data.numberItems);
+    data.restrictions = data.restrictions.slice(0, data.numberItems);
     return FILTER_ALERT_DATA;
   }
 }
