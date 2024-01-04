@@ -1,9 +1,10 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Query } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { AlertasService } from './alertas.service';
 
 import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
 import { ParamGroup } from './interfaces/parameter.interfaces';
+import { CreateAlertDto } from './dto/create-alerta.dto';
 
 @Controller('alertas')
 export class AlertasController {
@@ -43,5 +44,10 @@ export class AlertasController {
   @Get('/parameters')
   getParametersAlert(@Query('parameterGroup') parameterGroup: ParamGroup) {
     return this.alertasService.getParametersAlert(parameterGroup);
+  }
+
+  @Post()
+  createAlert(@Body() createAlertDto: CreateAlertDto) {
+    return this.alertasService.createAlert(createAlertDto);
   }
 }

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { FILTER_ALERT_DATA } from './data/filter-alert.data';
 import {
   PARAMETER_DATA_ESTADO_FINAL,
@@ -8,6 +8,8 @@ import {
   PARAMETER_DATA_TYPE_DOC,
 } from './data/parameter.data';
 import { ParamGroup } from './interfaces/parameter.interfaces';
+import { CreateAlertDto } from './dto/create-alerta.dto';
+import { IResponseCreateAlert } from './interfaces/filter-alert.interfaces';
 
 @Injectable()
 export class AlertasService {
@@ -41,4 +43,16 @@ export class AlertasService {
         return PARAMETER_DATA_MARCA_REVISION;
     }
   }
+
+  createAlert(bodyCreateAlert: CreateAlertDto) {
+    if (!bodyCreateAlert) throw new BadRequestException('Rechazado');
+    const response: IResponseCreateAlert = {
+      status: 'Success',
+      message: 'prueba mensaje',
+      alertControlId: 1,
+    };
+    return response;
+  }
+
+  updateAlert(bodyUpdateAlert: any) {}
 }

@@ -36,7 +36,7 @@ export type IRestriction = {
   finalReviewerName: string;
 };
 
-export type FilterAlertRequest = {
+export type IFilterAlertRequest = {
   activationDateFrom: string;
   activationDateUntil: string;
   reviewDateFrom: string;
@@ -49,3 +49,48 @@ export type FilterAlertRequest = {
   size: number;
   page: number;
 };
+
+/* create */
+export interface IBodyCreateAlert {
+  clientDocumentTypeId: string;
+  clientDocumentNumber: string;
+  businessName: string;
+  activationDate: string;
+  alertId: string;
+  alertTypeId: string;
+  processDetailId: string;
+  reviewMarkId: string;
+  reviewDate: string;
+  reviewDocumentName: string;
+  reviewerId: string;
+  finalStatusId: string;
+  finalReviewerId: string;
+  creationUser: string;
+  modificationUser: string;
+  roleId: string;
+}
+
+export interface IResponseCreateAlert {
+  status: string;
+  message: string;
+  alertControlId: number;
+}
+
+/* update */
+export interface IBodyUpdateAlert {
+  alertControlId: number;
+  reviewMarkId: string;
+  reviewDate: string;
+  reviewerId: string;
+  finalStatusId: string;
+  finalReviewerId: string;
+  modificationUser: string;
+  roleId: string;
+}
+
+export interface IGenericReponse {
+  status: string;
+  message: string;
+}
+
+/* for delete, update, genericResponse*/
