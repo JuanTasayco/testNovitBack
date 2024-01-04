@@ -9,7 +9,10 @@ import {
 } from './data/parameter.data';
 import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
-import { IResponseCreateAlert } from './interfaces/filter-alert.interfaces';
+import {
+  IGenericReponse,
+  IResponseCreateAlert,
+} from './interfaces/filter-alert.interfaces';
 
 @Injectable()
 export class AlertasService {
@@ -48,11 +51,30 @@ export class AlertasService {
     if (!bodyCreateAlert) throw new BadRequestException('Rechazado');
     const response: IResponseCreateAlert = {
       status: 'Success',
-      message: 'prueba mensaje',
+      message: 'prueba mensaje creation',
       alertControlId: 1,
     };
     return response;
   }
 
-  updateAlert(bodyUpdateAlert: any) {}
+  updateAlert(bodyUpdateAlert: any) {
+    if (!bodyUpdateAlert) throw new BadRequestException('Rechazado');
+    const response: IGenericReponse = {
+      status: 'Success',
+      message: 'prueba mensaje update',
+    };
+    return response;
+  }
+
+  deleteAlert(id: number) {
+    console.log(id);
+    if (!id) throw new BadRequestException('No existe id');
+
+    const response: IGenericReponse = {
+      status: 'Success',
+      message: 'Borrado correctamente',
+    };
+
+    return response;
+  }
 }

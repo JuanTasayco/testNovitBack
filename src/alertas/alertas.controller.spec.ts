@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
 import { AlertasController } from './alertas.controller';
 import { AlertasService } from './alertas.service';
