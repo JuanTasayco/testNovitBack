@@ -10,6 +10,8 @@ import {
 import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
 import {
+  IBodyCreateAlert,
+  IFilterAlertRequest,
   IGenericReponse,
   IResponseCreateAlert,
 } from './interfaces/filter-alert.interfaces';
@@ -17,7 +19,7 @@ import {
 @Injectable()
 export class AlertasService {
   /* 7 */
-  getAlerts(requestAlertBody: any) {
+  getAlerts(requestAlertBody: IFilterAlertRequest) {
     console.log(requestAlertBody);
     const { size, page } = requestAlertBody;
 
@@ -57,7 +59,7 @@ export class AlertasService {
     return response;
   }
 
-  updateAlert(bodyUpdateAlert: any) {
+  updateAlert(bodyUpdateAlert: IBodyCreateAlert) {
     if (!bodyUpdateAlert) throw new BadRequestException('Rechazado');
     const response: IGenericReponse = {
       status: 'Success',
@@ -69,12 +71,10 @@ export class AlertasService {
   deleteAlert(id: number) {
     console.log(id);
     if (!id) throw new BadRequestException('No existe id');
-
     const response: IGenericReponse = {
       status: 'Success',
       message: 'Borrado correctamente',
     };
-
     return response;
   }
 }

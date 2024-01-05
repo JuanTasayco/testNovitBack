@@ -23,7 +23,7 @@ export const FILTER_ALERT_DATA: IFilterAlertResponse = {
         processDetailName: 'emisión',
         reviewMarkId: 'test',
         reviewMarkName: 'activo',
-        reviewDate: '20/07/2034',
+        reviewDate: '2023-07-13',
         reviewDocumentName: 'sustento1.zip',
         reviewerId: 'test',
         reviewerName: 'juan perez',
