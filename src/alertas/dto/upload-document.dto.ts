@@ -12,5 +12,5 @@ export class UploadDocumentDto {
 
   @ValidateNested()
   @Type(() => DataRequestDocumentDto)
-  data: DataRequestDocumentDto;
+  data: DataRequestDocumentDto[];
 }
