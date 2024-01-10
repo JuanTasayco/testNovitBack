@@ -15,6 +15,7 @@ import {
   IResponseCreateAlert,
 } from './interfaces/filter-alert.interfaces';
 import { UpdateAlertDto } from './dto/update-alert.dto';
+import { UploadDocumentDto } from './dto/upload-document.dto';
 
 @Injectable()
 export class AlertasService {
@@ -71,6 +72,15 @@ export class AlertasService {
   deleteAlert(id: number) {
     console.log(id);
     if (!id) throw new BadRequestException('No existe id');
+    const response: IGenericReponse = {
+      status: 'Success',
+      message: 'Borrado correctamente',
+    };
+    return response;
+  }
+
+  updateDocument(bodyUpdateDocument: UploadDocumentDto) {
+    console.log(bodyUpdateDocument);
     const response: IGenericReponse = {
       status: 'Success',
       message: 'Borrado correctamente',

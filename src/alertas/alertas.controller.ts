@@ -14,6 +14,7 @@ import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
 import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
 import { UpdateAlertDto } from './dto/update-alert.dto';
+import { UploadDocumentDto } from './dto/upload-document.dto';
 
 @Controller('alertas')
 export class AlertasController {
@@ -43,5 +44,12 @@ export class AlertasController {
   @Delete('/alertControl')
   deleteAlert(@Query('alertControlId') alertControlId: number) {
     return this.alertasService.deleteAlert(alertControlId);
+  }
+
+  /* documents ( forma parte de filter) */
+
+  @Post('/document')
+  updateDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
+    return this.alertasService.updateDocument(bodyUpdateDocument);
   }
 }

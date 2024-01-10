@@ -93,4 +93,15 @@ export interface IGenericReponse {
   message: string;
 }
 
+export type IBodyUpdateDocument = {
+  creationUser: string;
+  modificationUser: string;
+  data: DatumUpdateDoc[];
+};
+
+export type DatumUpdateDoc = {
+  alertControlId: number;
+  reviewDocumentName: string;
+};
+
 /* for delete, update, genericResponse*/
