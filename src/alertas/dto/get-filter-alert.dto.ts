@@ -39,8 +39,8 @@ export class FilterAlertDtoRequest {
   roleId?: string;
 
   @IsOptional()
-  size?: number;
+  size: number;
 
   @IsOptional()
-  page?: number;
+  page: number;
 }

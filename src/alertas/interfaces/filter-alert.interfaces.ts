@@ -37,15 +37,15 @@ export type IRestriction = {
 };
 
 export type IFilterAlertRequest = {
-  activationDateFrom: string;
-  activationDateUntil: string;
-  reviewDateFrom: string;
-  reviewDateUntil: string;
-  reviewMarkId: string;
-  alertTypeId: string;
-  reviewStatusId: string;
-  userId: string;
-  roleId: string;
+  activationDateFrom?: string;
+  activationDateUntil?: string;
+  reviewDateFrom?: string;
+  reviewDateUntil?: string;
+  reviewMarkId?: string;
+  alertTypeId?: string;
+  reviewStatusId?: string;
+  userId?: string;
+  roleId?: string;
   size: number;
   page: number;
 };

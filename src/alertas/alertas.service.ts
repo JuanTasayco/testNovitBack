@@ -10,11 +10,11 @@ import {
 import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
 import {
-  IBodyCreateAlert,
   IFilterAlertRequest,
   IGenericReponse,
   IResponseCreateAlert,
 } from './interfaces/filter-alert.interfaces';
+import { UpdateAlertDto } from './dto/update-alert.dto';
 
 @Injectable()
 export class AlertasService {
@@ -59,7 +59,7 @@ export class AlertasService {
     return response;
   }
 
-  updateAlert(bodyUpdateAlert: IBodyCreateAlert) {
+  updateAlert(bodyUpdateAlert: UpdateAlertDto) {
     if (!bodyUpdateAlert) throw new BadRequestException('Rechazado');
     const response: IGenericReponse = {
       status: 'Success',
