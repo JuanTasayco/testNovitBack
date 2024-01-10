@@ -79,7 +79,7 @@ export class AlertasService {
     return response;
   }
 
-  updateDocument(bodyUpdateDocument: UploadDocumentDto) {
+  updloadDocument(bodyUpdateDocument: UploadDocumentDto) {
     console.log(bodyUpdateDocument);
     const response: IGenericReponse = {
       status: 'Success',

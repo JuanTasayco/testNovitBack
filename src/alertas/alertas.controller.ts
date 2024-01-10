@@ -49,8 +49,8 @@ export class AlertasController {
   /* documents ( forma parte de filter) */
 
   @Post('/document')
-  updateDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
-    return this.alertasService.updateDocument(bodyUpdateDocument);
+  updloadDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
+    return this.alertasService.updloadDocument(bodyUpdateDocument);
   }
 
   @Get('document')
