@@ -83,7 +83,7 @@ export class AlertasService {
     console.log(bodyUpdateDocument);
     const response: IGenericReponse = {
       status: 'Success',
-      message: 'Borrado correctamente',
+      message: 'Documento Subido correctamente',
     };
     return response;
   }
