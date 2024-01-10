@@ -52,4 +52,9 @@ export class AlertasController {
   updateDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
     return this.alertasService.updateDocument(bodyUpdateDocument);
   }
+
+  @Get('document')
+  getDocument(@Query('alertControlId') alertControlId: number) {
+    return this.alertasService.getDocument(alertControlId);
+  }
 }

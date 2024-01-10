@@ -87,4 +87,13 @@ export class AlertasService {
     };
     return response;
   }
+
+  getDocument(alertControlId: number) {
+    if (!alertControlId) throw new BadRequestException('No existe id');
+    const response: IGenericReponse = {
+      status: 'Success',
+      message: 'Documento descargado correctamente',
+    };
+    return response;
+  }
 }
