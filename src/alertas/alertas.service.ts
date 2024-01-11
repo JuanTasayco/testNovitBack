@@ -28,10 +28,8 @@ export class AlertasService {
     const dataAlert = JSON.parse(JSON.stringify(FILTER_ALERT_DATA));
 
     dataAlert.data.restrictions = dataAlert.data.restrictions.slice(0, size);
-
-    console.log(FILTER_ALERT_DATA.data.restrictions.length);
-    console.log(dataAlert.data.restrictions.length);
-
+    dataAlert.data.numberItems = size;
+    dataAlert.data.numberPages = page;
     return dataAlert;
   }
 
