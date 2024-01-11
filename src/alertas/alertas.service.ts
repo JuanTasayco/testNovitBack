@@ -6,6 +6,7 @@ import {
   PARAMETER_DATA_MARCA_REVISION,
   PARAMETER_DATA_TIPO_ALERTA,
   PARAMETER_DATA_TYPE_DOC,
+  PARAMETER_DATA_DET_PROCESO,
 } from './data/parameter.data';
 import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
@@ -43,7 +44,7 @@ export class AlertasService {
         return PARAMETER_DATA_TYPE_DOC;
 
       case 'DET_PROCESO':
-        return PARAMETER_DATA_ESTADO_FINAL;
+        return PARAMETER_DATA_DET_PROCESO;
 
       default:
         return PARAMETER_DATA_MARCA_REVISION;
