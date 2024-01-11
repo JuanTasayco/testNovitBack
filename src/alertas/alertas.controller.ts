@@ -26,8 +26,9 @@ export class AlertasController {
     return this.alertasService.getAlerts(queryParams);
   }
 
-  @Get('/parameters')
+  @Get('parameters')
   getParametersAlert(@Query('parameterGroup') parameterGroup: ParamGroup) {
+    console.log(parameterGroup);
     return this.alertasService.getParametersAlert(parameterGroup);
   }
 

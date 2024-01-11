@@ -21,7 +21,6 @@ import { UploadDocumentDto } from './dto/upload-document.dto';
 export class AlertasService {
   /* 7 */
   getAlerts(requestAlertBody: IFilterAlertRequest) {
-    console.log(requestAlertBody);
     const { size, page } = requestAlertBody;
 
     const { data } = FILTER_ALERT_DATA;
@@ -32,6 +31,7 @@ export class AlertasService {
   }
 
   getParametersAlert(parameterGroup: ParamGroup) {
+    console.log(parameterGroup);
     switch (parameterGroup) {
       case 'TIPO_ALERTA':
         return PARAMETER_DATA_TIPO_ALERTA;
