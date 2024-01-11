@@ -21,14 +21,18 @@ import { UploadDocumentDto } from './dto/upload-document.dto';
 @Injectable()
 export class AlertasService {
   /* 7 */
+
   getAlerts(requestAlertBody: IFilterAlertRequest) {
     const { size, page } = requestAlertBody;
 
-    const { data } = FILTER_ALERT_DATA;
-    data.numberItems = Number(size);
-    data.numberPages = Number(page);
-    data.restrictions = data.restrictions.slice(0, data.numberItems);
-    return FILTER_ALERT_DATA;
+    const dataAlert = JSON.parse(JSON.stringify(FILTER_ALERT_DATA));
+
+    dataAlert.data.restrictions = dataAlert.data.restrictions.slice(0, size);
+
+    console.log(FILTER_ALERT_DATA.data.restrictions.length);
+    console.log(dataAlert.data.restrictions.length);
+
+    return dataAlert;
   }
 
   getParametersAlert(parameterGroup: ParamGroup) {
