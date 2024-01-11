@@ -21,7 +21,7 @@ export class AlertasController {
   constructor(private readonly alertasService: AlertasService) {}
 
   /* 7 */
-  @Get('/alertsControl')
+  @Get('alertsControl')
   getAlerts(@Query() queryParams: FilterAlertDtoRequest) {
     return this.alertasService.getAlerts(queryParams);
   }
@@ -32,24 +32,24 @@ export class AlertasController {
     return this.alertasService.getParametersAlert(parameterGroup);
   }
 
-  @Post('/alertControl')
+  @Post('alertControl')
   createAlert(@Body() createAlertDto: CreateAlertDto) {
     return this.alertasService.createAlert(createAlertDto);
   }
 
-  @Put('/alertControl')
+  @Put('alertControl')
   updateAlert(@Body() bodyUpdateAlert: UpdateAlertDto) {
     return this.alertasService.updateAlert(bodyUpdateAlert);
   }
 
-  @Delete('/alertControl')
+  @Delete('alertControl')
   deleteAlert(@Query('alertControlId') alertControlId: number) {
     return this.alertasService.deleteAlert(alertControlId);
   }
 
   /* documents ( forma parte de filter) */
 
-  @Post('/document')
+  @Post('document')
   updloadDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
     return this.alertasService.updloadDocument(bodyUpdateDocument);
   }
@@ -58,4 +58,6 @@ export class AlertasController {
   getDocument(@Query('alertControlId') alertControlId: number) {
     return this.alertasService.getDocument(alertControlId);
   }
+
+  /* carga masiva */
 }

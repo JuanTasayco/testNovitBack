@@ -17,6 +17,11 @@ import {
 } from './interfaces/filter-alert.interfaces';
 import { UpdateAlertDto } from './dto/update-alert.dto';
 import { UploadDocumentDto } from './dto/upload-document.dto';
+import {
+  CARGA_MASIVA_DATA_BY_IDPROCESS,
+  CARGA_MASIVA_DATA_BY_USER,
+} from './data/carga-masiva.data';
+import { Datum } from './interfaces/carga-masiva.interface';
 
 @Injectable()
 export class AlertasService {
@@ -98,5 +103,22 @@ export class AlertasService {
       message: 'Documento descargado correctamente',
     };
     return response;
+  }
+
+  /* carga masiva */
+
+  getProcessCargaByUser(userId: string) {
+    if (!userId) throw new BadRequestException('no existe el userId');
+
+    let { data } = CARGA_MASIVA_DATA_BY_USER;
+    data = data.map((obj: Datum) => ({ userId, ...obj }));
+
+    console.log(data);
+    return CARGA_MASIVA_DATA_BY_USER;
+  }
+
+  getProcessCargaByIdProcess(process: string) {
+    if (!process) throw new BadRequestException('no existe el idProcess');
+    return CARGA_MASIVA_DATA_BY_IDPROCESS;
   }
 }
