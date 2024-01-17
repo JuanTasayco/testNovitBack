@@ -25,16 +25,12 @@ export const PARAMETER_DATA_DET_PROCESO: IParameterAlert = {
   messageCode: 'Successfull',
   data: [
     {
-      parameterId: 'DET_PROCESO1',
-      parameterName: 'DET_PROCESO1',
+      parameterId: 'E',
+      parameterName: 'Emisión',
     },
     {
-      parameterId: 'DET_PROCESO2',
-      parameterName: 'DET_PROCESO2',
-    },
-    {
-      parameterId: 'DET_PROCESO3',
-      parameterName: 'DET_PROCESO3',
+      parameterId: 'O',
+      parameterName: 'Órdenes de pago',
     },
   ],
 };
@@ -44,15 +40,15 @@ export const PARAMETER_DATA_TIPO_ALERTA: IParameterAlert = {
   messageCode: 'Successfull',
   data: [
     {
-      parameterId: 'ALERT_TYPE1',
+      parameterId: 'A',
       parameterName: 'ALERT_TYPE1',
     },
     {
-      parameterId: 'ALERT_TYPE2',
+      parameterId: 'S',
       parameterName: 'ALERT_TYPE2',
     },
     {
-      parameterId: 'ALERT_TYPE3',
+      parameterId: 'M',
       parameterName: 'ALERT_TYPE3',
     },
   ],
