@@ -8,14 +8,14 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { AlertasService } from './alertas.service';
+import { AlertasService } from '../alertas.service';
 
-import { FilterAlertDtoRequest } from './dto/get-filter-alert.dto';
-import { ParamGroup } from './interfaces/parameter.interfaces';
-import { CreateAlertDto } from './dto/create-alerta.dto';
-import { UpdateAlertDto } from './dto/update-alert.dto';
-import { UploadDocumentDto } from './dto/upload-document.dto';
-import { GenerateReport } from './dto/generate-report-alert.dto';
+import { FilterAlertDtoRequest } from '../dto/get-filter-alert.dto';
+import { ParamGroup } from '../interfaces/parameter.interfaces';
+import { CreateAlertDto } from '../dto/create-alerta.dto';
+import { UpdateAlertDto } from '../dto/update-alert.dto';
+import { UploadDocumentDto } from '../dto/upload-document.dto';
+import { GenerateReport } from '../dto/generate-report-alert.dto';
 
 @Controller('alertas')
 export class AlertasController {

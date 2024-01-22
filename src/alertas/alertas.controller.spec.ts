@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
-import { AlertasController } from './alertas.controller';
+import { AlertasController } from './controllers/alertas.controller';
 import { AlertasService } from './alertas.service';
 
 describe('AlertasController', () => {
