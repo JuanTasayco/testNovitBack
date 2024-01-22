@@ -36,6 +36,7 @@ export type IRestriction = {
   finalReviewerName: string;
 };
 
+/* user params for filter alert */
 export type IFilterAlertRequest = {
   activationDateFrom?: string;
   activationDateUntil?: string;
@@ -49,6 +50,31 @@ export type IFilterAlertRequest = {
   size: number;
   page: number;
 };
+
+/*download - generate report */
+export interface IGenerateReport {
+  activationDateFrom: string;
+  activationDateUntil: string;
+  reviewDateFrom: string;
+  reviewDateUntil: string;
+  reviewMarkId: string;
+  alertTypeId: string;
+  reviewStatusId: string;
+  format: string;
+}
+
+/* razon social */
+export interface IBusinessNameRequest {
+  tipoDoc: string;
+  numDoc: string;
+  tipoConsulta: string;
+}
+
+export interface IBusinessNameResponse {
+  status: string;
+  message: string;
+  businessName: string;
+}
 
 /* create */
 export interface IBodyCreateAlert {
