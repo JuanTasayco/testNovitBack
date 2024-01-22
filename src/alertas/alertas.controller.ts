@@ -15,6 +15,7 @@ import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
 import { UpdateAlertDto } from './dto/update-alert.dto';
 import { UploadDocumentDto } from './dto/upload-document.dto';
+import { GenerateReport } from './dto/generate-report-alert.dto';
 
 @Controller('alertas')
 export class AlertasController {
@@ -57,6 +58,11 @@ export class AlertasController {
   @Get('document')
   getDocument(@Query('alertControlId') alertControlId: number) {
     return this.alertasService.getDocument(alertControlId);
+  }
+
+  @Post('alert/downLoad')
+  generateReport(@Body() generateReportAlert: GenerateReport) {
+    return this.alertasService.generateReport(generateReportAlert);
   }
 
   /* carga masiva */

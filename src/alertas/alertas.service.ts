@@ -22,6 +22,7 @@ import {
   CARGA_MASIVA_DATA_BY_USER,
 } from './data/carga-masiva.data';
 import { Datum } from './interfaces/carga-masiva.interface';
+import { GenerateReport } from './dto/generate-report-alert.dto';
 
 @Injectable()
 export class AlertasService {
@@ -121,4 +122,6 @@ export class AlertasService {
     if (!process) throw new BadRequestException('no existe el idProcess');
     return CARGA_MASIVA_DATA_BY_IDPROCESS;
   }
+
+  generateReport(generateReportBody: GenerateReport) {}
 }
