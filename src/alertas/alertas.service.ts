@@ -23,6 +23,7 @@ import {
 } from './data/carga-masiva.data';
 import { Datum } from './interfaces/carga-masiva.interface';
 import { GenerateReport } from './dto/generate-report-alert.dto';
+import { RazonSocial } from './dto/razon-social.dto';
 
 @Injectable()
 export class AlertasService {
@@ -105,6 +106,9 @@ export class AlertasService {
     };
     return response;
   }
+
+  /* obtener razón social */
+  getRazonSocialCreateAlert(razonSocial: RazonSocial) {}
 
   /* carga masiva */
 

@@ -16,6 +16,7 @@ import { CreateAlertDto } from '../dto/create-alerta.dto';
 import { UpdateAlertDto } from '../dto/update-alert.dto';
 import { UploadDocumentDto } from '../dto/upload-document.dto';
 import { GenerateReport } from '../dto/generate-report-alert.dto';
+import { RazonSocial } from '../dto/razon-social.dto';
 
 @Controller('alertas')
 export class AlertasController {
@@ -48,8 +49,12 @@ export class AlertasController {
     return this.alertasService.deleteAlert(alertControlId);
   }
 
-  /* documents ( forma parte de filter) */
+  @Post('businessName')
+  getRazonSocialCreateAlert(@Body() razonSocialBody: RazonSocial) {
+    return this.alertasService.getRazonSocialCreateAlert(razonSocialBody);
+  }
 
+  /* documents ( forma parte de filter) */
   @Post('document')
   updloadDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
     return this.alertasService.updloadDocument(bodyUpdateDocument);
