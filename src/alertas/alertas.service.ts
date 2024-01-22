@@ -11,6 +11,7 @@ import {
 import { ParamGroup } from './interfaces/parameter.interfaces';
 import { CreateAlertDto } from './dto/create-alerta.dto';
 import {
+  IBusinessNameResponse,
   IFilterAlertRequest,
   IGenericReponse,
   IResponseCreateAlert,
@@ -108,7 +109,15 @@ export class AlertasService {
   }
 
   /* obtener razón social */
-  getRazonSocialCreateAlert(razonSocial: RazonSocial) {}
+  getRazonSocialCreateAlert(razonSocial: RazonSocial) {
+    const response: IBusinessNameResponse = {
+      status: 'successfull',
+      message: 'correcto',
+      businessName: 'BusinessName',
+    };
+
+    return response;
+  }
 
   /* carga masiva */
 
