@@ -123,5 +123,14 @@ export class AlertasService {
     return CARGA_MASIVA_DATA_BY_IDPROCESS;
   }
 
-  generateReport(generateReportBody: GenerateReport) {}
+  generateReport(generateReportBody: GenerateReport) {
+    return {
+      status: 'Successfull',
+      message: 'correctamente generado',
+      data: {
+        archiveBase64: 'string',
+        archiveName: 'string',
+      },
+    };
+  }
 }
