@@ -1,30 +1,30 @@
 /* eslint-disable prettier/prettier */
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { FILTER_ALERT_DATA } from './data/filter-alert.data';
+import { FILTER_ALERT_DATA } from '../data/filter-alert.data';
 import {
   PARAMETER_DATA_ESTADO_FINAL,
   PARAMETER_DATA_MARCA_REVISION,
   PARAMETER_DATA_TIPO_ALERTA,
   PARAMETER_DATA_TYPE_DOC,
   PARAMETER_DATA_DET_PROCESO,
-} from './data/parameter.data';
-import { ParamGroup } from './interfaces/parameter.interfaces';
-import { CreateAlertDto } from './dto/create-alerta.dto';
+} from '../data/parameter.data';
+import { ParamGroup } from '../interfaces/parameter.interfaces';
+import { CreateAlertDto } from '../dto/create-alerta.dto';
 import {
   IBusinessNameResponse,
   IFilterAlertRequest,
   IGenericReponse,
   IResponseCreateAlert,
-} from './interfaces/filter-alert.interfaces';
-import { UpdateAlertDto } from './dto/update-alert.dto';
-import { UploadDocumentDto } from './dto/upload-document.dto';
+} from '../interfaces/filter-alert.interfaces';
+import { UpdateAlertDto } from '../dto/update-alert.dto';
+import { UploadDocumentDto } from '../dto/upload-document.dto';
 import {
   CARGA_MASIVA_DATA_BY_IDPROCESS,
   CARGA_MASIVA_DATA_BY_USER,
-} from './data/carga-masiva.data';
-import { Datum } from './interfaces/carga-masiva.interface';
-import { GenerateReport } from './dto/generate-report-alert.dto';
-import { RazonSocial } from './dto/razon-social.dto';
+} from '../data/carga-masiva.data';
+import { Datum } from '../interfaces/carga-masiva.interface';
+import { GenerateReport } from '../dto/generate-report-alert.dto';
+import { RazonSocial } from '../dto/razon-social.dto';
 
 @Injectable()
 export class AlertasService {
@@ -110,6 +110,7 @@ export class AlertasService {
 
   /* obtener razón social */
   getRazonSocialCreateAlert(razonSocial: RazonSocial) {
+    
     const response: IBusinessNameResponse = {
       status: 'successfull',
       message: 'correcto',

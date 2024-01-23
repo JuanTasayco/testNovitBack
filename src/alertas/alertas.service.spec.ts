@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
-import { AlertasService } from './alertas.service';
+import { AlertasService } from './services/alertas.service';
 
 describe('AlertasService', () => {
   let service: AlertasService;

@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Controller, Get, Query } from '@nestjs/common';
-import { AlertasService } from '../alertas.service';
+import { AlertasService } from '../services/alertas.service';
 
 @Controller('alertas')
 export class CargaMasivaController {

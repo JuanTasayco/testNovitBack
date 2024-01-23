@@ -8,7 +8,7 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { AlertasService } from '../alertas.service';
+import { AlertasService } from '../services/alertas.service';
 
 import { FilterAlertDtoRequest } from '../dto/get-filter-alert.dto';
 import { ParamGroup } from '../interfaces/parameter.interfaces';
