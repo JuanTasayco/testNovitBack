@@ -78,15 +78,15 @@ export const PARAMETER_DATA_ESTADO_FINAL: IParameterAlert = {
   messageCode: 'Successfull',
   data: [
     {
-      parameterId: 'STATUS_FINAL1',
+      parameterId: 'S',
       parameterName: 'STATUS_FINAL1',
     },
     {
-      parameterId: 'STATUS_FINAL2',
+      parameterId: 'A',
       parameterName: 'STATUS_FINAL2',
     },
     {
-      parameterId: 'STATUS_FINAL3',
+      parameterId: 'W',
       parameterName: 'STATUS_FINAL3',
     },
   ],
