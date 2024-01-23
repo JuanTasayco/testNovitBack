@@ -7,30 +7,32 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { FilterAlertDtoRequest } from '../dto/get-filter-alert.dto';
-import { CreateAlertDto } from '../dto/create-alerta.dto';
-import { UpdateAlertDto } from '../dto/update-alert.dto';
+
 import { DerivarAlertaService } from '../services/derivar-alerta.service';
+import { getDerivarAlerta } from '../dto/derivar-alerta/get-derivar-alerta.dto';
+import { createDerivarAlerta } from '../dto/derivar-alerta/create-derivar-alerta.dto';
+import { updateDerivarAlerta } from '../dto/derivar-alerta/update-derivar-alerta.dto';
 
 @Controller('alertas')
 export class DerivarAlertaController {
   constructor(private readonly derivarAlerta: DerivarAlertaService) {}
-  @Get('alertsControl')
-  getAlerts(@Query() queryParams: FilterAlertDtoRequest) {
+
+  @Get('derivarlerta')
+  getAlerts(@Query() queryParams: getDerivarAlerta) {
     return this.derivarAlerta.getDerivarAlerta(queryParams);
   }
 
-  @Post('alertControl')
-  createAlert(@Body() createAlertDto: CreateAlertDto) {
+  @Post('derivarlerta')
+  createAlert(@Body() createAlertDto: createDerivarAlerta) {
     return this.derivarAlerta.createDerivarAlerta(createAlertDto);
   }
 
-  @Put('alertControl')
-  updateAlert(@Body() bodyUpdateAlert: UpdateAlertDto) {
+  @Put('derivarlerta')
+  updateAlert(@Body() bodyUpdateAlert: updateDerivarAlerta) {
     return this.derivarAlerta.updateDerivarAlerta(bodyUpdateAlert);
   }
 
-  @Delete('alertControl')
+  @Delete('derivarlerta')
   deleteAlert(@Query('alertControlId') alertControlId: number) {
     return this.derivarAlerta.deleteDerivarAlerta(alertControlId);
   }

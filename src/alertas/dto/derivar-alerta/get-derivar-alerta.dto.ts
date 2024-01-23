@@ -1,22 +1,28 @@
 /* eslint-disable prettier/prettier */
-import { IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 
 export class getDerivarAlerta {
   @IsString()
-  userOriginId: string;
+  @IsOptional()
+  userOriginId?: string;
 
   @IsString()
-  userDestinationId: string;
+  @IsOptional()
+  userDestinationId?: string;
 
   @IsString()
-  dateFrom: string /* 29/02/2024 */;
+  @IsOptional()
+  dateFrom?: string /* 29/02/2024 */;
 
   @IsString()
-  dateUntil: string;
+  @IsOptional()
+  dateUntil?: string;
 
   @IsString()
-  size: number;
+  @IsOptional()
+  size?: number;
 
   @IsString()
-  page: number;
+  @IsOptional()
+  page?: number;
 }

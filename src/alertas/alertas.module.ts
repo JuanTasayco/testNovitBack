@@ -4,7 +4,7 @@ import { AlertasService } from './services/alertas.service';
 import { AlertasController } from './controllers/alertas.controller';
 import { CargaMasivaController } from './controllers/carga-masiva.controller';
 import { DerivarAlertaController } from './controllers/derivar-alerta.controller';
-import { DerivarAlertaService } from './services/derivar-alerta/derivar-alerta.service';
+import { DerivarAlertaService } from './services/derivar-alerta.service';
 
 @Module({
   controllers: [

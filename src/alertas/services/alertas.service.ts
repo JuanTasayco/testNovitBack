@@ -42,7 +42,6 @@ export class AlertasService {
   }
 
   getParametersAlert(parameterGroup: ParamGroup) {
-    console.log(parameterGroup);
     switch (parameterGroup) {
       case 'TIPO_ALERTA':
         return PARAMETER_DATA_TIPO_ALERTA;
@@ -110,7 +109,6 @@ export class AlertasService {
 
   /* obtener razón social */
   getRazonSocialCreateAlert(razonSocial: RazonSocial) {
-    
     const response: IBusinessNameResponse = {
       status: 'successfull',
       message: 'correcto',
