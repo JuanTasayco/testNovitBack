@@ -3,7 +3,17 @@ import { IsString } from 'class-validator';
 
 export class createDerivarAlerta {
   @IsString()
-  clientDocumentTypeId: string;
+  roleId: string;
   @IsString()
-  clientDocumentNumber: string;
+  userOriginId: string;
+  @IsString()
+  userDestinationId: string;
+  @IsString()
+  dateFrom: string;
+  @IsString()
+  dateUntil: string;
+  @IsString()
+  creationUser: string;
+  @IsString()
+  modificationUser: string;
 }

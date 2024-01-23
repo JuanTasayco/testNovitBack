@@ -3,7 +3,13 @@ import { IsString } from 'class-validator';
 
 export class updateDerivarAlerta {
   @IsString()
-  clientDocumentTypeId: string;
+  delegationId: number;
   @IsString()
-  clientDocumentNumber: string;
+  dateFrom: string;
+  @IsString()
+  dateUntil: string;
+  @IsString()
+  status: string;
+  @IsString()
+  modificationUser: string;
 }
