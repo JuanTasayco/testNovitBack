@@ -126,8 +126,6 @@ export class AlertasService {
 
     let { data } = CARGA_MASIVA_DATA_BY_USER;
     data = data.map((obj: Datum) => ({ userId, ...obj }));
-
-    console.log(data);
     return CARGA_MASIVA_DATA_BY_USER;
   }
 
