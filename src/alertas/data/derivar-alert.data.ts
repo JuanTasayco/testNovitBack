@@ -1,4 +1,83 @@
 /* eslint-disable prettier/prettier */
 import { IGetDerivarAlertaResponse } from '../interfaces/derivar-alerta.interface';
-/* 
-export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {}; */
+
+export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {
+  statusCode: 200,
+  messageCode: 'Successful',
+  data: {
+    numberItems: 2,
+    numberPages: 1,
+    delegations: [
+      {
+        delegationId: 1,
+        roleId: '',
+        userOriginId: 'WEBMASTER1',
+        userOriginName: '',
+        userDestinationId: 'NEYMAR',
+        userDestinationIdName: '',
+        dateFrom: '02/01/2024',
+        dateUntil: '01/02/2024',
+        status: 'A',
+      },
+      {
+        delegationId: 2,
+        roleId: '',
+        userOriginId: 'WEBMASTER2',
+        userOriginName: '',
+        userDestinationId: 'CR7',
+        userDestinationIdName: '',
+        dateFrom: '02/01/2024',
+        dateUntil: '02/01/2024',
+        status: 'S',
+      },
+      ,
+      {
+        delegationId: 3,
+        roleId: '',
+        userOriginId: 'WEBMASTER3',
+        userOriginName: '',
+        userDestinationId: 'HALLAND',
+        userDestinationIdName: '',
+        dateFrom: '02/01/2024',
+        dateUntil: '02/01/2024',
+        status: 'S',
+      },
+      ,
+      {
+        delegationId: 4,
+        roleId: '',
+        userOriginId: 'WEBMASTER4',
+        userOriginName: '',
+        userDestinationId: 'YVARGAS',
+        userDestinationIdName: '',
+        dateFrom: '02/01/2024',
+        dateUntil: '02/01/2024',
+        status: 'S',
+      },
+
+      {
+        delegationId: 5,
+        roleId: '',
+        userOriginId: 'WEBMASTER5',
+        userOriginName: '',
+        userDestinationId: 'PIZARRO',
+        userDestinationIdName: '',
+        dateFrom: '02/01/2024',
+        dateUntil: '02/01/2024',
+        status: 'S',
+      },
+
+      {
+        delegationId: 6,
+        roleId: '',
+        userOriginId: 'WEBMASTER6',
+        userOriginName: '',
+        userDestinationId: 'MESSI',
+        userDestinationIdName: '',
+        dateFrom: '02/01/2024',
+        dateUntil: '02/01/2024',
+        status: 'S',
+      },
+    ],
+  },
+};

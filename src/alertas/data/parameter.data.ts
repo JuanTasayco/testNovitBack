@@ -59,15 +59,15 @@ export const PARAMETER_DATA_MARCA_REVISION: IParameterAlert = {
   messageCode: 'Successfull',
   data: [
     {
-      parameterId: 'MARCA_REV1',
+      parameterId: 'X',
       parameterName: 'MARCA_REV1',
     },
     {
-      parameterId: 'MARCA_REV2',
+      parameterId: 'Y',
       parameterName: 'MARCA_REV2',
     },
     {
-      parameterId: 'MARCA_REV3',
+      parameterId: 'Z',
       parameterName: 'MARCA_REV3',
     },
   ],

@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { FILTER_DERIVAR_DATA } from '../data/derivar-alert.data';
 
 @Injectable()
 export class DerivarAlertaService {
   getDerivarAlerta(derivarParams: any) {
-    console.log(derivarParams);
+    return FILTER_DERIVAR_DATA;
   }
   createDerivarAlerta(bodyCreateDerivarAlerta: any) {
     return {

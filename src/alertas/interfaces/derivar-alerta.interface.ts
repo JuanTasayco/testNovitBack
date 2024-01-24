@@ -27,7 +27,7 @@ export interface IDelegations {
   userOriginId: string;
   userOriginName: string;
   userDestinationId: string;
-  userDestinationName: string;
+  userDestinationIdName: string;
   dateFrom: string /* 27/12/2023 */;
   dateUntil: string;
   status: string;
