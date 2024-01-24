@@ -4,6 +4,7 @@ import {
   Controller,
   Delete,
   Get,
+  Param,
   Post,
   Put,
   Query,
@@ -23,7 +24,7 @@ export class AlertasController {
   constructor(private readonly alertasService: AlertasService) {}
 
   /* 7 */
-  @Get('alertsControl')
+  @Get('alert')
   getAlerts(@Query() queryParams: FilterAlertDtoRequest) {
     return this.alertasService.getAlerts(queryParams);
   }
@@ -34,19 +35,22 @@ export class AlertasController {
     return this.alertasService.getParametersAlert(parameterGroup);
   }
 
-  @Post('alertControl')
+  @Post('alert')
   createAlert(@Body() createAlertDto: CreateAlertDto) {
     return this.alertasService.createAlert(createAlertDto);
   }
 
-  @Put('alertControl')
-  updateAlert(@Body() bodyUpdateAlert: UpdateAlertDto) {
-    return this.alertasService.updateAlert(bodyUpdateAlert);
+  @Put('alert/:alertId')
+  updateAlert(
+    @Param('alertId') alertId: number,
+    @Body() bodyUpdateAlert: UpdateAlertDto,
+  ) {
+    return this.alertasService.updateAlert(alertId, bodyUpdateAlert);
   }
 
-  @Delete('alertControl')
-  deleteAlert(@Query('alertControlId') alertControlId: number) {
-    return this.alertasService.deleteAlert(alertControlId);
+  @Delete('alert:alertId')
+  deleteAlert(@Param('alertId') alertId: number) {
+    return this.alertasService.deleteAlert(alertId);
   }
 
   @Post('businessName')

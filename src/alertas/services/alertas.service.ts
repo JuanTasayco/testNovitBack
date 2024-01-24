@@ -70,7 +70,8 @@ export class AlertasService {
     return response;
   }
 
-  updateAlert(bodyUpdateAlert: UpdateAlertDto) {
+  updateAlert(paramId: number, bodyUpdateAlert: UpdateAlertDto) {
+    console.log(paramId);
     if (!bodyUpdateAlert) throw new BadRequestException('Rechazado');
     const response: IGenericReponse = {
       status: 'Success',
