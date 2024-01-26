@@ -3,16 +3,16 @@ import { IsString } from 'class-validator';
 
 export class getDerivarAlerta {
   @IsString()
-  userOriginId: string;
+  userOrigin: string;
 
   @IsString()
-  userDestinationId?: string;
+  userDestination?: string;
 
   @IsString()
-  dateFrom?: string /* 29/02/2024 */;
+  startDate?: string /* 29/02/2024 */;
 
   @IsString()
-  dateUntil?: string;
+  endDate?: string;
 
   @IsString()
   size?: number;

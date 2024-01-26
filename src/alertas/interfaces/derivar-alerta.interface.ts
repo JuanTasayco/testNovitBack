@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* params */
 export interface IGetDerivarAlerta {
-  userOriginId: string;
-  userDestinationId: string;
-  dateFrom: string /* 29/02/2024 */;
-  dateUntil: string;
+  userOrigin: string;
+  userDestination: string;
+  startDate: string /* 29/02/2024 */;
+  endDate: string;
   size: number;
   page: number;
 }
@@ -23,17 +23,16 @@ export interface IData {
 
 export interface IDelegations {
   delegationId: number;
-  roleId: string;
-  userOriginId: string;
+  userOrigin: string;
   userOriginName: string;
-  userDestinationId: string;
-  userDestinationIdName: string;
+  userDestination: string;
+  userDestinationName: string;
   dateFrom: string /* 27/12/2023 */;
   dateUntil: string;
   status: string;
 }
 
-/* create alerte */
+/* create alerte  status es opcional*/
 export interface ICreateDerivarAlerta {
   roleId: string;
   userOriginId: string;
@@ -60,11 +59,11 @@ export interface IUpdateDerivarAlerta {
   modificationUser: string;
 }
 
-/* update and delte */
+/* update and delte and create*/
 export interface IGenericReponse {
   statusCode: string;
   messageCode: string;
-  data?: string /* o null */;
+  data?: string | number /* o null */;
 }
 
 /* deleteAlert */

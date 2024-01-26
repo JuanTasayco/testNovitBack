@@ -18,7 +18,7 @@ import { updateDerivarAlerta } from '../dto/derivar-alerta/update-derivar-alerta
 export class DerivarAlertaController {
   constructor(private readonly derivarAlerta: DerivarAlertaService) {}
 
-  @Get('derivarlerta')
+  @Get('users/alerts')
   getAlerts(@Query() queryParams: getDerivarAlerta) {
     return this.derivarAlerta.getDerivarAlerta(queryParams);
   }

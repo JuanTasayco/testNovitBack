@@ -126,7 +126,7 @@ export class AlertasService {
 
     let { data } = CARGA_MASIVA_DATA_BY_USER;
     data = data.map((obj: Datum) => ({ userId, ...obj }));
-    return CARGA_MASIVA_DATA_BY_USER;
+    return data;
   }
 
   getProcessCargaByIdProcess(process: string) {

@@ -15,6 +15,7 @@ export class DerivarAlertaService {
     dataAlert.data.numberPages = page;
     return dataAlert;
   }
+
   createDerivarAlerta(bodyCreateDerivarAlerta: any) {
     return {
       statusCode: 'string',
@@ -22,6 +23,7 @@ export class DerivarAlertaService {
       data: 1,
     };
   }
+
   updateDerivarAlerta(bodyUpdateDerivarAlerta: any) {
     return {
       statusCode: '200',
