@@ -5,13 +5,14 @@ export type ProcessCargaMasivaResponse = {
   data: Datum[];
 };
 
-export type Datum = {
+export interface Datum {
   processId?: string;
-  alertControlId?: number;
+  alertId?: number;
   userId?: string;
-  nameId?: string;
+  userName?: string;
   dateProcess?: string;
-  status: string;
+  status?: string;
+  gestorId?: string;
   description?: string;
   reviewDocumentName?: string;
-};
+}

@@ -124,9 +124,13 @@ export class AlertasService {
   getProcessCargaByUser(userId: string) {
     if (!userId) throw new BadRequestException('no existe el userId');
 
-    let { data } = CARGA_MASIVA_DATA_BY_USER;
-    data = data.map((obj: Datum) => ({ userId, ...obj }));
-    return data;
+    CARGA_MASIVA_DATA_BY_USER.data = CARGA_MASIVA_DATA_BY_USER.data.map(
+      (obj: Datum) => ({
+        userId,
+        ...obj,
+      }),
+    );
+    return CARGA_MASIVA_DATA_BY_USER;
   }
 
   getProcessCargaByIdProcess(process: string) {
