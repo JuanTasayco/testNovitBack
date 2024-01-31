@@ -20,15 +20,15 @@ export class FilterAlertDtoRequest {
 
   @IsString()
   @IsOptional()
-  reviewMarkId?: string;
+  reviewMark?: string;
 
   @IsString()
   @IsOptional()
-  alertTypeId?: string;
+  alertType?: string;
 
   @IsString()
   @IsOptional()
-  reviewStatusId?: string;
+  reviewStatus?: string;
 
   @IsString()
   @IsOptional()

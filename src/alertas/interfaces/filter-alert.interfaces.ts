@@ -1,4 +1,18 @@
 /* eslint-disable prettier/prettier */
+export interface IFilterAlertRequest {
+  activationDateFrom?: string;
+  activationDateUntil?: string;
+  reviewDateFrom?: string;
+  reviewDateUntil?: string;
+  reviewMark?: string;
+  alertType?: string;
+  reviewStatus?: string;
+  userId?: string;
+  roleId?: string;
+  size?: number;
+  page?: number;
+}
+
 export type IFilterAlertResponse = {
   status: number;
   message: string;
@@ -12,44 +26,31 @@ export type IData = {
 };
 
 export type IRestriction = {
-  alertControlId: number;
-  documentTypeId: string;
+  rowNumber: number;
+  alertId: string;
+  documentType: string;
   documentTypeName: string;
   documentNumber: string;
   businessName: string;
   activationDate: string;
-  alertId: string;
   alertName: string;
-  alertTypeId: string;
+  alertType: string;
   alertTypeName: string;
-  processDetailId: string;
+  processDetail: string;
   processDetailName: string;
-  reviewMarkId: string;
+  reviewMark: string;
   reviewMarkName: string;
   reviewDate: string;
   reviewDocumentName: string;
   reviewerId: string;
   reviewerName: string;
-  finalStatusId: string;
+  finalStatus: string;
   finalStatusName: string;
-  finalReviewerId: string;
+  finalReviewer: string;
   finalReviewerName: string;
 };
 
 /* user params for filter alert */
-export type IFilterAlertRequest = {
-  activationDateFrom?: string;
-  activationDateUntil?: string;
-  reviewDateFrom?: string;
-  reviewDateUntil?: string;
-  reviewMarkId?: string;
-  alertTypeId?: string;
-  reviewStatusId?: string;
-  userId?: string;
-  roleId?: string;
-  size: number;
-  page: number;
-};
 
 /*download - generate report */
 export interface IGenerateReport {
