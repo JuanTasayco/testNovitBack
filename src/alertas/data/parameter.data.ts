@@ -60,11 +60,11 @@ export const PARAMETER_DATA_MARCA_REVISION: IParameterAlert = {
   data: [
     {
       parameterId: 'A',
-      parameterName: 'ACTIVO',
+      parameterName: 'Activo',
     },
     {
       parameterId: 'I',
-      parameterName: 'INACTIVO',
+      parameterName: 'Inactivo',
     },
   ],
 };
@@ -75,11 +75,11 @@ export const PARAMETER_DATA_ESTADO_FINAL: IParameterAlert = {
   data: [
     {
       parameterId: 'A',
-      parameterName: 'ALERTA',
+      parameterName: 'Alerta',
     },
     {
       parameterId: 'I',
-      parameterName: 'INUSUAL',
+      parameterName: 'Inusual',
     },
   ],
 };
