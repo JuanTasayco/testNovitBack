@@ -59,16 +59,12 @@ export const PARAMETER_DATA_MARCA_REVISION: IParameterAlert = {
   messageCode: 'Successfull',
   data: [
     {
-      parameterId: 'X',
-      parameterName: 'MARCA_REV1',
+      parameterId: 'A',
+      parameterName: 'ACTIVO',
     },
     {
-      parameterId: 'Y',
-      parameterName: 'MARCA_REV2',
-    },
-    {
-      parameterId: 'Z',
-      parameterName: 'MARCA_REV3',
+      parameterId: 'I',
+      parameterName: 'INACTIVO',
     },
   ],
 };
@@ -78,16 +74,12 @@ export const PARAMETER_DATA_ESTADO_FINAL: IParameterAlert = {
   messageCode: 'Successfull',
   data: [
     {
-      parameterId: 'S',
-      parameterName: 'STATUS_FINAL1',
-    },
-    {
       parameterId: 'A',
-      parameterName: 'STATUS_FINAL2',
+      parameterName: 'ALERTA',
     },
     {
-      parameterId: 'W',
-      parameterName: 'STATUS_FINAL3',
+      parameterId: 'I',
+      parameterName: 'INUSUAL',
     },
   ],
 };
