@@ -48,9 +48,9 @@ export class AlertasController {
     return this.alertasService.updateAlert(alertId, bodyUpdateAlert);
   }
 
-  @Delete('alert:alertId')
-  deleteAlert(@Param('alertId') alertId: number) {
-    return this.alertasService.deleteAlert(alertId);
+  @Delete('user/:userId/alerts')
+  deleteAlert(@Param('userId') userId: number) {
+    return this.alertasService.deleteAlert(userId);
   }
 
   @Post('businessName')
