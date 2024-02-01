@@ -14,8 +14,8 @@ export interface IFilterAlertRequest {
 }
 
 export type IFilterAlertResponse = {
-  status: number;
-  message: string;
+  statusCode: number;
+  messageCode: string;
   data: IData;
 };
 

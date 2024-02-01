@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 
 export class CreateAlertDto {
   @IsString()
@@ -33,5 +33,6 @@ export class CreateAlertDto {
   @IsString()
   modificationUser: string;
   @IsString()
-  roleId: string;
+  @IsOptional()
+  roleId?: string;
 }
