@@ -27,7 +27,7 @@ export type IData = {
 
 export type IRestriction = {
   rowNumber: number;
-  alertId: string;
+  alertId: number;
   documentType: string;
   documentTypeName: string;
   documentNumber: string;

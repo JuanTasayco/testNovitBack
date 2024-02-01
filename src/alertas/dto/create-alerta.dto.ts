@@ -3,9 +3,9 @@ import { IsString } from 'class-validator';
 
 export class CreateAlertDto {
   @IsString()
-  clientDocumentTypeId: string;
+  documentType: string;
   @IsString()
-  clientDocumentNumber: string;
+  documentNumber: string;
   @IsString()
   businessName: string;
   @IsString()
@@ -13,11 +13,11 @@ export class CreateAlertDto {
   @IsString()
   alertId: string;
   @IsString()
-  alertTypeId: string;
+  alertType: string;
   @IsString()
-  processDetailId: string;
+  processDetail: string;
   @IsString()
-  reviewMarkId: string;
+  reviewMark: string;
   @IsString()
   reviewDate: string;
   @IsString()
@@ -25,9 +25,9 @@ export class CreateAlertDto {
   @IsString()
   reviewerId: string;
   @IsString()
-  finalStatusId: string;
+  finalStatus: string;
   @IsString()
-  finalReviewerId: string;
+  finalReviewer: string;
   @IsString()
   creationUser: string;
   @IsString()
