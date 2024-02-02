@@ -1,8 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {
-  Datum,
-  ProcessCargaMasivaResponse,
-} from '../interfaces/carga-masiva.interface';
+import { ProcessCargaMasivaResponse } from '../interfaces/carga-masiva.interface';
 
 export const CARGA_MASIVA_DATA_BY_USER: ProcessCargaMasivaResponse = {
   status: 'Sucess',

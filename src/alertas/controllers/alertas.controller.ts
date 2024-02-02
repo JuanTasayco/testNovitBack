@@ -61,12 +61,12 @@ export class AlertasController {
   /* documents ( forma parte de filter) */
   @Post('document')
   updloadDocument(@Body() bodyUpdateDocument: UploadDocumentDto) {
-    return this.alertasService.updloadDocument(bodyUpdateDocument);
+    return this.alertasService.updloadDocumentGD(bodyUpdateDocument);
   }
 
   @Get('document')
   getDocument(@Query('alertControlId') alertControlId: number) {
-    return this.alertasService.getDocument(alertControlId);
+    return this.alertasService.getDocumentGD(alertControlId);
   }
 
   @Post('alert/downLoad')

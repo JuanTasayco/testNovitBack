@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { FILTER_ALERT_DATA } from '../data/filter-alert.data';
+import { DATA_DOWNLOAD_GD, FILTER_ALERT_DATA } from '../data/filter-alert.data';
 import {
   PARAMETER_DATA_ESTADO_FINAL,
   PARAMETER_DATA_MARCA_REVISION,
@@ -90,7 +90,7 @@ export class AlertasService {
     return response;
   }
 
-  updloadDocument(bodyUpdateDocument: UploadDocumentDto) {
+  updloadDocumentGD(bodyUpdateDocument: UploadDocumentDto) {
     console.log(bodyUpdateDocument);
     const response: IGenericReponse = {
       status: 'Success',
@@ -99,13 +99,9 @@ export class AlertasService {
     return response;
   }
 
-  getDocument(alertControlId: number) {
+  getDocumentGD(alertControlId: number) {
     if (!alertControlId) throw new BadRequestException('No existe id');
-    const response: IGenericReponse = {
-      status: 'Success',
-      message: 'Documento descargado correctamente',
-    };
-    return response;
+    return DATA_DOWNLOAD_GD;
   }
 
   /* obtener razón social */
