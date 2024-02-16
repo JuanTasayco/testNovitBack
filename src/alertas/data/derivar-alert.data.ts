@@ -26,7 +26,7 @@ export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {
         userDestinationName: '',
         dateFrom: '2023-12-27 00:00:00.0',
         dateUntil: '2023-12-27 00:00:00.0',
-        status: 'S',
+        status: 'A',
       },
       {
         delegationId: 44,
@@ -46,7 +46,7 @@ export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {
         userDestinationName: '',
         dateFrom: '2023-12-27 00:00:00.0',
         dateUntil: '2023-12-27 00:00:00.0',
-        status: 'S',
+        status: 'A',
       },
       {
         delegationId: 47,
@@ -56,7 +56,7 @@ export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {
         userDestinationName: '',
         dateFrom: '2023-12-27 00:00:00.0',
         dateUntil: '2023-12-27 00:00:00.0',
-        status: 'S',
+        status: 'A',
       },
       {
         delegationId: 49,
@@ -66,7 +66,7 @@ export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {
         userDestinationName: '',
         dateFrom: '2023-12-27 00:00:00.0',
         dateUntil: '2023-12-27 00:00:00.0',
-        status: 'S',
+        status: 'A',
       },
       {
         delegationId: 51,
@@ -86,7 +86,7 @@ export const FILTER_DERIVAR_DATA: IGetDerivarAlertaResponse = {
         userDestinationName: '',
         dateFrom: '2023-12-27 00:00:00.0',
         dateUntil: '2023-12-27 00:00:00.0',
-        status: 'S',
+        status: 'A',
       },
       {
         delegationId: 48,
