@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 
 export class getDerivarAlerta {
   @IsString()
@@ -12,6 +12,7 @@ export class getDerivarAlerta {
   startDate?: string /* 29/02/2024 */;
 
   @IsString()
+  @IsOptional()
   endDate?: string;
 
   @IsString()
