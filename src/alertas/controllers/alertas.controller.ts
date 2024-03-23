@@ -24,23 +24,23 @@ export class AlertasController {
   constructor(private readonly alertasService: AlertasService) {}
 
   /* 7 */
-  @Get('alert')
+  @Get('oimAlerta/alert')
   getAlerts(@Query() queryParams: FilterAlertDtoRequest) {
     return this.alertasService.getAlerts(queryParams);
   }
 
-  @Get('parameters')
+  @Get('oimParametroAlerta/parameters')
   getParametersAlert(@Query('parameterGroup') parameterGroup: ParamGroup) {
     console.log(parameterGroup);
     return this.alertasService.getParametersAlert(parameterGroup);
   }
 
-  @Post('alert')
+  @Post('oimAlerta/alert')
   createAlert(@Body() createAlertDto: CreateAlertDto) {
     return this.alertasService.createAlert(createAlertDto);
   }
 
-  @Put('alert/:alertId')
+  @Put('oimAlerta/alert/:alertId')
   updateAlert(
     @Param('alertId') alertId: number,
     @Body() bodyUpdateAlert: UpdateAlertDto,
