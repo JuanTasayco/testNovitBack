@@ -135,13 +135,16 @@ export class AlertasService {
   }
 
   generateReport(generateReportBody: GenerateReport) {
+    console.log('hola');
     return {
-      status: 'Successfull',
-      message: 'correctamente generado',
-      data: {
-        archiveBase64: 'string',
-        archiveName: 'string',
-      },
+      status: 'String',
+      message: 'String',
+      data: [
+        {
+          base64File: 'String',
+          nameFile: 'String',
+        },
+      ],
     };
   }
 }

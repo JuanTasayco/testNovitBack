@@ -9,7 +9,7 @@ export class CargaMasivaController {
     return this.alertasService.getProcessCargaByUser(userId); /* userId */
   }
 
-  @Get('loadDetail')
+  @Get('oimUsuarioAlerta/process/:id/chargeProcess')
   getProcessCargaMasivaByIdProcess(@Query() processId: string) {
     return this.alertasService.getProcessCargaByIdProcess(processId);
   }
